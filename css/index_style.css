@@ -1,0 +1,86 @@
+html, body {
+width:100%;
+height:100%;
+margin: 0;
+padding: 0;
+}
+
+
+/******************************************svg******************************************/
+
+	svg{
+	width: 100%;
+	height:auto;	
+	}
+
+	#assistanthover, #iahover, #blockchainhover, #mediashover, #bpmhover, #tableorientationhover, #menuaccueilhover, #menuintrohover, #menubibliohover, #menucreditshover {
+	z-index:99;
+	opacity: 0;
+	}
+
+
+/******************************************messageaffichage******************************************/
+
+  #messageaffichage{
+  width:70%;
+  height: 80%;
+  opacity: 95%;
+  position: fixed;
+  background-color: #4E5656;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  padding : 30px;
+  z-index: 20;
+  display: none;
+  }
+
+  #messageaffichagecontenu{
+  width: 80%;
+  margin: auto;
+  height : 100%;
+  display: table;
+  }
+
+  .fakeCell{
+  display: table-row;
+  }
+
+  .messageaffichagetitre{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 2.4em;
+  color: #7D8B8A;
+  text-align: center;
+  line-height: 1.5em;
+  z-index: 40;
+  margin-bottom: 15px;
+  }
+
+  .messageaffichagecorps{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 1.2em;
+  color: white;
+  text-align: center;
+  margin-bottom: 40px;
+  }
+
+  #messageaffichagegif{
+  display: table-row;
+  height: auto;
+  width:80%;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  }
+
+  @media screen and (orientation: portrait) {
+    #messageaffichage {
+      display:block;
+    }
+  }

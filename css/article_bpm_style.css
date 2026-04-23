@@ -1,0 +1,907 @@
+html, body{
+margin: 0;
+padding: 0;
+}
+
+/******************************************messageaffichage******************************************/
+
+  #messageaffichage{
+  width:70%;
+  height: 80%;
+  opacity: 95%;
+  position: fixed;
+  background-color: #4E5656;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  padding : 30px;
+  z-index: 20;
+  display: none;
+  }
+
+  #messageaffichagecontenu{
+  width: 80%;
+  margin: auto;
+  height : 100%;
+  display: table;
+  }
+
+  .fakeCell{
+  display: table-row;
+  }
+
+  .messageaffichagetitre{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 2.4em;
+  color: #7D8B8A;
+  text-align: center;
+  line-height: 1.5em;
+  z-index: 40;
+  margin-bottom: 15px;
+  }
+
+  .messageaffichagecorps{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 1.2em;
+  color: white;
+  text-align: center;
+  margin-bottom: 40px;
+  }
+
+  #messageaffichagegif{
+  display: table-row;
+  height: auto;
+  width:80%;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  }
+
+  @media screen and (orientation: portrait) {
+    #messageaffichage {
+      display:block;
+    }
+  }
+
+/******************************************svg******************************************/
+
+  svg{
+  width:100%;
+  height:100%;
+  margin: 0;
+  padding: 0;
+  }
+
+  #menuaccueilhover, #menuarticlehover, #menuinterviewhover, #menubibliospehover, #menuGouvernanceEthiquehover, #menuEffetReseauRepresentationhover, #menuRelationFournisseursUsagershover, #menuRelationFormeFonctionhover {
+  z-index:99;
+  opacity: 0;
+  }
+
+#page{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+width:100%; 
+height: 100%;
+position:fixed;
+z-index: 10;
+margin:0;
+padding: 0;
+}
+
+#menugauche{
+height: 100%;
+width: calc( 0.2924 * 100vh );
+z-index: 10;
+}
+
+#menudroite{
+height: 100%;
+width: calc( 0.2924 * 100vh );
+z-index: 10;
+}
+
+#page2{
+width:100%; 
+height: 100%;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+z-index: 1;
+}
+
+.colonnevide{
+width: calc( 0.2924 * 100vh );
+z-index: -99;
+}
+
+#colonne{
+width: calc( 100vw - calc( 0.60 * 100vh ));
+min-width: 370px;
+background-color: white;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+z-index: 10;
+}
+
+
+/* ////////////////// fiche récapitulative ////////////////// */
+
+
+#RelationFormeFonctionrecap{
+width:40%;
+height: auto;
+position: fixed;
+background-color: #28C686;
+display: none;
+flex-direction: column;
+justify-content: flex-end;
+align-items: flex-start;
+padding :20px 30px;
+z-index: 20;
+right : 12.4%;
+bottom : 28.7%;
+}
+
+#RelationFormeFonctiontitre{
+max-width: 85%;
+height: auto;
+font-family: 'Montserrat', sans-serif;
+font-weight: 400;
+font-size: 1.5em;
+color: #94FFCE;
+margin-bottom: 10px;
+line-height: 1.5em;
+}
+
+#RelationFournisseursUsagersrecap{
+width:40%;
+height: auto;
+position: fixed;
+background-color: #3F6E99;
+display: none;
+flex-direction: column;
+justify-content: flex-end;
+align-items: flex-start;
+padding :20px 30px;
+z-index: 20;
+right : 12.4%;
+bottom : 19.05%;
+}
+
+#RelationFournisseursUsagerstitre{
+max-width: 85%;
+height: auto;
+font-family: 'Montserrat', sans-serif;
+font-weight: 400;
+font-size: 1.5em;
+color: #9CCFF2;
+margin-bottom: 10px;
+line-height: 1.5em;
+}
+
+#EffetReseauRepresentationrecap{
+width:40%;
+height: auto;
+position: fixed;
+background-color: #E25C33;
+display: none;
+flex-direction: column;
+justify-content: flex-end;
+align-items: flex-start;
+padding :20px 30px;
+z-index: 20;
+right : 12.4%;
+bottom : 9.4%;
+}
+
+#EffetReseauRepresentationtitre{
+max-width: 85%;
+height: auto;
+font-family: 'Montserrat', sans-serif;
+font-weight: 400;
+font-size: 1.5em;
+color: #F4B576;
+margin-bottom: 10px;
+line-height: 1.5em;
+}
+
+#GouvernanceEthiquerecap{
+width:40%;
+height: auto;
+position: fixed;
+background-color: #C93152;
+display: none;
+flex-direction: column;
+justify-content: flex-end;
+align-items: flex-start;
+padding :20px 30px;
+z-index: 20;
+right : 12.4%;
+bottom : 0.5%;
+}
+
+#GouvernanceEthiquetitre{
+max-width: 85%;
+height: auto;
+font-family: 'Montserrat', sans-serif;
+font-weight: 400;
+font-size: 1.5em;
+color: #EF818A;
+margin-bottom: 10px;
+line-height: 1.5em;
+}
+
+.ficherecapitulativecorps{
+width: 100%;
+height: auto;
+font-family: 'IBM Plex Sans', sans-serif;
+font-weight: 400;
+font-size: 1em;
+color: white;
+text-align: left;
+line-height: 1.5em;
+background-color: transparent;  
+}
+
+
+/* ////////////////// Style the header: fixed position (always stay at the top) ////////////////// */
+
+.header {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  top: 0;
+  z-index: 99;
+  background-color: transparent;
+}
+
+
+/* ////////////////// barre progression ////////////////// */
+
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #BACCCA;
+  margin-left: auto;
+  margin-right: auto;
+
+  z-index:99;
+}
+
+
+.progress-bar {
+  height: 8px;
+  background: #F4B576;
+  width: 0%;
+  z-index:10;
+}
+
+
+/* ////////////////// bloc entete ////////////////// */
+
+#entete{
+width:80%;
+background-color: white;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: flex-start;
+margin-top: 70px;
+}
+
+#titraille{
+width:65%;
+background-color: white;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+align-items: flex-start;
+}
+
+#categorie{
+height: auto;
+font-family: 'Montserrat', cursive;
+color: #4e5656;
+font-weight: 300;
+font-style: italic;
+font-size: 2.1em;
+}
+
+#titre{
+height: auto;
+font-family: 'Montserrat', sans-serif;
+font-weight: 800;
+font-size:4em;
+color: #E25C33;
+margin-top: 50px;
+}
+
+#soustitre{
+height: auto;
+font-family: 'Montserrat', sans-serif;
+font-weight: 400;
+font-size: 2.8em;
+color: #E25C33;
+margin-top: 10px;
+}
+
+#date{
+height: auto;
+font-family: 'Montserrat', sans-serif;
+font-weight: 600;
+font-size:1.8em;
+font-style: italic;
+color: #F4B576;
+background-color: transparent;
+margin-top: 30px;
+}
+
+.blocimg_entete{
+display: flex;
+background-color: transparent;
+width: 35%;
+height: auto;
+padding-top: 24px;
+}
+
+#img_entete{
+max-width:100%;
+max-height:100%;
+margin-top: auto;
+margin-bottom: auto; 
+}
+
+
+/* ////////////////// bloc intro ////////////////// */
+
+.introcorps{
+width:100%;
+height: auto;
+font-family: 'IBM Plex Sans', sans-serif;
+font-weight: 400;
+font-size: 1.2em;
+color: #7D8C8B;
+text-align: left;
+line-height: 1.5em;
+margin-top: 90px;
+}
+
+
+
+
+/* ////////////////// bloc fondamentaux ////////////////// */
+
+.blocfondamentaux{
+width:100%;
+background-color: #E25C33;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+align-items: flex-start;
+margin-bottom: 100px;
+padding-bottom: 50px;
+}
+
+.fondamentauxtitre{
+width:80%;
+font-family: 'Montserrat', sans-serif;
+font-weight: 400;
+font-size: 2em;
+color: #F4B576;
+display: flex;
+align-items: flex-start;
+background-color: transparent;
+margin-left: auto;
+margin-right: auto;
+margin-top: 80px;
+margin-bottom: 50px;
+}
+
+.fondamentauxpartie{
+width:80%;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+background-color: transparent;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 60px;
+}
+
+.fondamentauxpartietitre{
+height: auto;
+font-family: 'Montserrat', sans-serif;
+font-weight: 800;
+font-size:2em;
+color: white;
+background-color: transparent;
+}
+
+.fondamentauxblocparagraphe{
+display: flex;
+justify-content: space-between;
+background-color: transparent;
+padding-top: 24px;
+}
+
+.fondamentauxpartietexte{
+width:57%;
+font-family: 'IBM Plex Sans', sans-serif;
+font-weight: 400;
+font-size: 1.2em;
+color: white;
+text-align: left;
+line-height: 1.5em;
+}
+
+.fondamentauxpartieimage{
+display: flex;
+background-color: transparent;
+width: 38%;
+height: auto;
+}
+
+#fondamentauximage{
+max-width:100%;
+max-height:100%;
+margin-top: auto;
+margin-bottom: auto; 
+}
+
+.gras{
+font-weight: 800;
+}
+
+#lienfondamentaux{
+color: #F4B576;
+font-family: 'IBM Plex Sans', sans-serif;
+text-decoration: none;
+font-weight: 700;
+}
+
+
+/* ////////////////// bloc paragraphe ////////////////// */
+
+.blocparagraphe{
+width:100%;
+background-color: white;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: flex-start;
+margin-bottom: 100px;
+}
+
+.paragraphecolonnegauche{
+width:21%;
+height: auto;
+background-color: transparent;
+text-align: center;
+align-self: flex-start;
+}
+
+.paragraphenumero{
+font-family: 'Montserrat', sans-serif;
+font-weight: 800;
+font-size: 2.8em;
+color: #E25C33;
+margin-top: 21px;
+transform: translateX(20%);
+position: relative;
+}
+
+.paragraphecolonnecentre{
+width:55%;
+height: auto;
+background-color: white;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+align-items: flex-start;
+}
+
+.paragraphecolonnedroite{
+width:21%;
+height: auto;
+background-color: white;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+align-items: flex-start;
+}
+
+.paragraphetitre{
+width:100%;
+height: auto;
+font-family: 'Montserrat', sans-serif;
+font-weight: 600;
+font-size: 2em;
+color: #E25C33;
+background-color: white;
+position: relative;
+text-align: left;
+border-style: solid;
+padding: 21px 0 21px 0;
+border-width: 0px;
+border-color: white;
+}
+
+.paragraphecorps{
+width:100%;
+height: auto;
+font-family: 'IBM Plex Sans', sans-serif;
+font-weight: 400;
+font-size: 1.2em;
+color: #4E5656;
+text-align: left;
+line-height: 1.5em;
+margin-top: 30px;
+}
+
+#lienparties{
+color: #E25C33;
+font-family: 'IBM Plex Sans', sans-serif;
+text-decoration: none;
+font-weight: 700;
+}
+
+.paragrapheimage{
+max-width:83%;
+height: auto;
+display: flex;
+margin-left: auto;
+margin-right: auto;
+margin-top: 60px;
+}
+
+.paragrapheimagelegende{
+max-width:80%;
+height: auto;
+font-family: 'IBM Plex Sans', sans-serif;
+font-weight: 400;
+font-size: 1em;
+color: #4e5656;
+font-style: italic;
+display: flex;
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+margin-top: 24px;
+margin-bottom: 30px;
+}
+
+.basdepage{
+width:100%;
+height: auto;
+font-family: 'IBM Plex Sans', sans-serif;
+font-weight: 400;
+font-size: 1.2em;
+color: #4E5656;
+text-align: left;
+line-height: 1.5em;
+}
+
+/* ////////////////// paramétrage titres sticky ////////////////// */
+
+.paragraphetitre.fixed {
+position: fixed;
+top: 0;
+width: 47%;
+text-align: left;
+box-sizing: border-box;
+z-index: 10;
+}
+
+.paragraphetitre.fixed.absolute {
+position: absolute;
+z-index: 10;
+}
+
+/* ////////////////// paramétrage numéro sticky ////////////////// */
+
+.paragraphenumero.fixed {
+position: fixed;
+top: 0;
+width: 47%;
+text-align: center;
+transform: translateX(50px);
+box-sizing: border-box;
+z-index: 10;
+}
+
+.paragraphenumero.fixed.absolute {
+position: absolute;
+z-index: 10;
+}
+
+/* ////////////////// paramétrage impression propre ////////////////// */
+
+@media print {
+  
+  #menugauche, #menudroite, #ficherecapitulative, .colonnevide, aside {
+  display:none;
+  }
+
+  #colonne{
+  width:100%;
+  }
+
+  #categorie{
+  font-size: 1.5em;
+  }
+
+  #titre{
+  font-size: 1.8em;
+  margin-top: 10px;
+  }
+
+  #soustitre{
+  font-size: 0.8em;
+  margin-top: 10px;
+  }
+
+  .introcorps{
+  font-size: 0.5em;
+  margin-top: 40px;
+  margin-bottom: 0px;
+  }
+
+  .blocfondamentaux{
+  margin-bottom: 60px;
+  }
+
+  .fondamentauxtitre{
+  font-size: 1.5em;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  }
+
+  .fondamentauxpartie{
+  margin-bottom: 40px;
+  }
+
+  .fondamentauxpartietexte{
+  width:65%;
+  height: 100%;
+  background-color: transparent;
+  font-size: 0.5em;
+  margin-top: 20px;
+  color: #4E5656;
+  }
+
+  #fondamentauxpartieimage{
+  width:30%;
+  height: auto;
+  margin-top: 80px;
+  }
+
+  .fondamentauxpartietitre{
+  font-size:0.8em;
+  background-color: transparent;
+  }
+
+  .blocparagraphe{
+  width:100%;
+  margin-bottom: 60px;
+  }
+
+  .paragraphecolonnegauche, .paragraphecolonnedroite{
+  width:21%;
+  }
+
+  .paragraphenumero{
+  font-size: 1.5em;
+  margin-top: 0px;
+  }
+
+  .paragraphecolonnecentre{
+  width:58%;
+  }
+
+  .paragraphetitre{
+  width:100%;
+  font-size: 1em;
+  padding: 0 0 21px 0;
+  }
+
+  .paragraphecorps{
+  width:100%;
+  font-size: 0.5em;
+  margin-top: 0px;
+  }
+
+  .paragrapheimage{
+  max-width:80%;
+  height: auto;
+  margin-top: 20px;
+  }
+
+  .paragrapheimagelegende{
+  max-width:80%;
+  font-size: 0.4em;
+  }
+
+  .basdepage{
+  font-size: 0.5em;
+  }
+
+}
+
+
+
+/* ////////////////// paramétrage telephone ////////////////// */
+
+@media screen and (max-width: 850px) {
+
+
+  /* ////////////////// bloc entete ////////////////// */
+
+  #entete{
+  margin-top: 40px;
+  }
+
+  #categorie{
+  font-size: 1.4em;
+  }
+
+  #titre{
+  font-size:1.8em;
+  margin-top: 30px;
+  }
+
+  #soustitre{
+  font-size: 1.6em;
+  }
+
+  #date{
+  font-size:1.2em;
+  }
+
+  .introcorps{
+  font-size: 0.9em;
+  margin-top: 70px;
+  }
+
+
+  /* ////////////////// bloc fondamentaux ////////////////// */
+
+  .blocfondamentaux{
+  margin-bottom: 50px;
+  padding-bottom: 40px;
+  }
+
+  .fondamentauxtitre{
+  width:85%;
+  font-size: 1.2em;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  }
+
+  .fondamentauxpartie{
+  width:85%;
+  }
+
+  .fondamentauxpartietitre{
+  font-size:1.2em;
+  }
+
+  .fondamentauxpartietexte{
+  font-size: 0.9em;
+  }
+
+
+  /* ////////////////// bloc paragraphe ////////////////// */
+
+  .paragraphecolonnegauche{
+  width:10%;
+  }
+
+  .blocparagraphe{
+  margin-bottom: 50px;
+  }
+
+  .paragraphenumero{
+  font-size: 1.1em;
+  margin-top: 15px;
+  transform: translateX(10%);
+  }
+
+  .paragraphecolonnecentre{
+  width:80%;
+  }
+
+  .paragraphecolonnedroite{
+  width:10%;
+  }
+
+  .paragrapheimage{
+  margin-top: 40px;
+  }
+
+  .paragrapheimagelegende{
+  font-size: 0.7em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  }
+
+  .paragraphetitre{
+  font-size: 1.1em;
+  padding: 15px 0 15px 0;
+  }
+
+ .paragraphecorps{
+  font-size: 0.9em;
+  margin-top: 20px;
+  }
+
+  .basdepage{
+  font-size: 0.9em;
+  }
+
+
+  /* ////////////////// fiche récapitulative ////////////////// */
+
+  #RelationFormeFonctionrecap{
+  width:50%;
+  padding :10px 15px;
+  z-index: 20;
+  right : 10%;
+  }
+
+  #RelationFormeFonctiontitre{
+  width:100%;
+  font-size: 1.1em;
+  }
+
+  #RelationFournisseursUsagersrecap{
+  width:50%;
+  padding :10px 15px;
+  z-index: 20;
+  right : 10%;
+  }
+
+  #RelationFournisseursUsagerstitre{
+  width:100%;
+  font-size: 1.1em;
+  }
+
+  #EffetReseauRepresentationrecap{
+  width:50%;
+  padding :10px 15px;
+  z-index: 20;
+  right : 10%;
+  }
+
+  #EffetReseauRepresentationtitre{
+  width:100%;
+  font-size: 1.1em;
+  }
+
+  #GouvernanceEthiquerecap{
+  width:50%;
+  padding :10px 15px;
+  z-index: 20;
+  right : 10%;
+  }
+
+  #GouvernanceEthiquetitre{
+  width:100%;
+  font-size: 1.1em;
+  }
+
+  .ficherecapitulativecorps{
+  font-size: 0.8em;
+  line-height: 1.2em; 
+  }
+
+}
